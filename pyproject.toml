@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-guard"
+version = "0.1.0"
+description = "Intercept MCP requests from Claude Desktop / Claude Web and ask the user to Allow or Block each one."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["aiohttp>=3.9"]  # only the HTTP proxy uses it
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+mcp-guard = "mcp_guard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
