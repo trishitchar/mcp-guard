@@ -4,6 +4,9 @@ Asks you to allow or block every MCP tool call that Claude makes, before it
 reaches the server. Works with Claude Desktop (local servers) and Claude Web
 (remote connectors).
 
+It's a standalone desktop app written in Python. No browser extension, plugin or
+add-on is used or needed.
+
 Demo video: _link here_
 
 ## How it works
